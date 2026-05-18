@@ -10,7 +10,7 @@ conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 cursor = conn.cursor()
 
 # --- Swap in any query from the Query Reference section ---
-cursor.execute("SELECT * FROM customer;")
+cursor.execute("SELECT company_name FROM customer;")
 
 # Fetch and print every row returned
 rows = cursor.fetchall()
